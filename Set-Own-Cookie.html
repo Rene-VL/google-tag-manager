@@ -1,0 +1,9 @@
+<!--Wir wollen einen Cookie selber setzen-->
+<script>
+    var date = new Date();
+    var dateTimeNow = date.getTime();
+    date.setTime(dateTimeNow + 9460800000);
+    var expiration = date.toUTCString();
+
+    document.cookie = "Udemy_Kursteilnehmer=true; expires="+expiration+" ; path=/; domain=." + location.hostname.replace(/^www\./i, "");
+</script>
